@@ -13,15 +13,11 @@ export default function PostList() {
     <div className="posts">
       <h1>Post List</h1>
       <ul>
-        {posts.map((post, ind) => (<li key={ind}><Link to={post.path}>{post.name}</Link> <Switch><Route exact path={post.path} component={PostDetail} /></Switch></li>))}
+        {posts.map((post, ind) => <li key={ind}><Link to={post.path}>{post.name}</Link> </li>)}
         {/* Render a list of Links from the posts object   */}
       </ul>
 
-      {/* <Switch>
-        {posts.map((post, ind) => <Route exact path={post.path} component={PostDetail} />)
 
-        } */}
-    </Switch>
     </div >
   )
 }
